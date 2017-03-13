@@ -6,7 +6,7 @@ def succesion(info):
     appkey="e5ccc9c7c8834ec3b08940e290ff1559"
 
     url="http://www.tuling123.com/openapi/api?key=%s&info=%s"%(appkey,info)
-    content=requests.get(url)
+    content=requests.post(url)
     answer=content.text
 
     ans=json.loads(answer)
@@ -20,9 +20,9 @@ def main(info):
     print 'tuling:%s'%aa
 
 if __name__ == '__main__':
-    print '开始聊天吧:'.decode('utf-8').encode('gbk')
+    print ('开始聊天吧:')
     while True:
-        info = raw_input('hinewai:')
+        info = input('hinewai:')
         if '88' in info:
             break
         main(info)
