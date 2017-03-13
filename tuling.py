@@ -15,9 +15,10 @@ def succesion(info):
     return aa
 
 def main(info):
-    info = info.decode('gbk').encode('utf-8')
+#     info = info.decode('gbk').encode('utf-8')
+    info = info.encode('utf-8')
     aa=succesion(info)
-    print 'tuling:%s'%aa
+    print ('tuling:%s'%aa)
 
 if __name__ == '__main__':
     print ('开始聊天吧:')
